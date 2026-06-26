@@ -1,0 +1,8 @@
+<!DOCTYPE html><html><head><title>Weather</title></head><body>
+<h1>Current Weather</h1>
+{% if error %}<p>{{error}}</p>{% elif weather_data %}
+<p>{{weather_data.name}}, {{weather_data.sys.country}}</p>
+<p>{{weather_data.main.temp}} °C</p>
+<p>{{weather_data.weather[0].description}}</p>
+{% else %}<p>No data.</p>{% endif %}
+</body></html>
